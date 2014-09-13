@@ -10,8 +10,9 @@
     <form id="form1" runat="server">
     <div>
         <ul>
-        <li><a href="/Brands/Add.aspx">Marka Ekle</a></li>
-        <li><a href="/Brands/List.aspx">Listele</a></li>
+        <li><a href="/View/Brands/Add.aspx">Marka Ekle</a></li>
+        <li><a href="/View/Brands/List.aspx">Listele</a></li>
+        <li><a href="/View/Models/Add.aspx">Model Ekle</a></li>
         </ul>
     </div>
     </form>

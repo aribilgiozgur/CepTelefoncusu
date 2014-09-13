@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace CepTelefoncusu.Classes
 {
-    public class Brand : DbConn
+    public class Brand : BaseClass
     {
         public int Id { get; set; }
         public String BrandText { get; set; }

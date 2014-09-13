@@ -20,7 +20,7 @@ namespace CepTelefoncusu.Brands
             Brand b = new Brand();
             b.BrandText = txtBrandName.Text;
             b.Insert();
-            Response.Redirect("../index.aspx");
+            Response.Redirect("List.aspx");
         }
     }
 }
