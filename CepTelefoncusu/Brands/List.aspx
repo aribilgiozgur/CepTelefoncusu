@@ -8,16 +8,28 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    <ul>
-        <asp:Repeater ID="rptBrand" runat="server">
-        <ItemTemplate>
-            <li> <%#Eval("BrandText") %></li>
-        </ItemTemplate>
-        </asp:Repeater>
-        <li><a href="/Brands/Add.aspx">Marka Ekle</a></li>
-    </ul>
-    </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Markası</th>
+                    <th colspan="2">İşlemler</th>
+                </tr>
+
+                <asp:Repeater ID="rptBrand" runat="server">
+                <ItemTemplate>
+                    <tr> 
+                        <td><%# Eval("Id") %></td>
+                        <td><%# Eval("BrandText") %></td>
+                        <td><a href="Edit.aspx?Id=<%# Eval("Id") %>">Edit</a></td>
+                        <td><a href="Delete.aspx?Id=<%# Eval("Id") %>">Sil</a></td>
+                    </tr>
+                </ItemTemplate>
+                </asp:Repeater>                
+            </table>
+            <a href="/Brands/Add.aspx">Marka Ekle</a>
+    
+        </div>
     </form>
 </body>
 </html>
