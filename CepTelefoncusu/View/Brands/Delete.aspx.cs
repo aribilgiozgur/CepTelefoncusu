@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CepTelefoncusu.Brands
+namespace CepTelefoncusu.View.Brands
 {
     public partial class Delete : System.Web.UI.Page
     {
@@ -26,7 +26,7 @@ namespace CepTelefoncusu.Brands
 
             Brand b = new Brand(Id);
             b.Delete();
-           
+
             Response.Redirect("List.aspx");
 
         }

@@ -113,6 +113,11 @@
     <Compile Include="View\Brands\Delete.aspx.designer.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Application\BaseClass.cs" />
+    <Compile Include="Domain\Phone\Brand.cs" />
+    <Compile Include="Application\DbConn.cs" />
+    <Compile Include="Domain\Phone\Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Brands\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -127,11 +132,6 @@
     <Compile Include="View\Brands\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Application\BaseClass.cs" />
-    <Compile Include="Domain\Phone\Brand.cs" />
-    <Compile Include="Application\DbConn.cs" />
-    <Compile Include="Domain\Phone\Model.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Models\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

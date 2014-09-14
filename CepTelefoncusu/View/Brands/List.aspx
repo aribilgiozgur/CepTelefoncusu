@@ -1,19 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="CepTelefoncusu.Brands.List" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Cep Telefoncu Hilmi</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <table>
-                <tr>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/BootStrap.Master" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="CepTelefoncusu.View.Brands.List" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+      <div class="container">
+            <table class="table table-striped">
+                <tr class="success">
                     <th>Id</th>
                     <th>Markası</th>
-                    <th colspan="2">İşlemler</th>
+                    <th>İşlemler</th>
                 </tr>
 
                 <asp:Repeater ID="rptBrand" runat="server">
@@ -21,8 +15,8 @@
                     <tr> 
                         <td><%# Eval("Id") %></td>
                         <td><%# Eval("BrandText") %></td>
-                        <td><a href="Edit.aspx?Id=<%# Eval("Id") %>">Edit</a></td>
-                        <td><a href="Delete.aspx?Id=<%# Eval("Id") %>">Sil</a></td>
+                        <td><a href="Edit.aspx?Id=<%# Eval("Id") %>"><i class="glyphicon glyphicon-wrench"></i></a>
+                        <a href="Delete.aspx?Id=<%# Eval("Id") %>"><i class="glyphicon glyphicon-remove"></i></a></td>
                     </tr>
                 </ItemTemplate>
                 </asp:Repeater>                
@@ -30,6 +24,4 @@
             <a href="/View/Brands/Add.aspx">Marka Ekle</a>
     
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
