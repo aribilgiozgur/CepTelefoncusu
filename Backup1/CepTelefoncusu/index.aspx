@@ -11,10 +11,8 @@
     <div>
         <ul>
         <li><a href="/View/Brands/Add.aspx">Marka Ekle</a></li>
-        <li><a href="/View/Brands/List.aspx">Marka Listele</a></li>
+        <li><a href="/View/Brands/List.aspx">Listele</a></li>
         <li><a href="/View/Models/Add.aspx">Model Ekle</a></li>
-        <li><a href="/View/Models/List.aspx">Model Listele</a></li>
-
         </ul>
     </div>
     </form>

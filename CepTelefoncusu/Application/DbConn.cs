@@ -8,7 +8,10 @@ namespace CepTelefoncusu.Classes
 {
     public class DbConn
     {
-        public SqlConnection cnn = new SqlConnection("Server=localhost\\SQLEXPRESS; Database=CepTelDB; Trusted_Connection = true;");
+        // Normal sınıf
+        //public SqlConnection cnn = new SqlConnection("Server=localhost\\SQLEXPRESS; Database=CepTelDB; Trusted_Connection = true;");
+        // VS 2012 Sınıfı
+        public SqlConnection cnn = new SqlConnection("Server=.; Database=CepTelDB; Trusted_Connection = true;");
         
     }
 }
