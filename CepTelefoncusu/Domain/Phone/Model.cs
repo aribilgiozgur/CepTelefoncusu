@@ -122,5 +122,21 @@ namespace CepTelefoncusu.Classes
             }
 
         }
+        
+        public Boolean Delete()
+        {
+            String sql = "DELETE FROM Models WHERE Id = @Id";
+
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            cmd.Parameters.AddWithValue("@Id", this.Id);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+
+            return true;
+
+
+        }
     }
 }

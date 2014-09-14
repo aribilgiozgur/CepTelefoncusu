@@ -30,6 +30,8 @@
                 </ItemTemplate>
             </asp:Repeater>
         </table>
+        <a href="/View/Models/Add.aspx">Model Ekle</a>
+
     </div>
     </form>
 </body>

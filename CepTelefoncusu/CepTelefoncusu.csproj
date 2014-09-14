@@ -67,6 +67,7 @@
     <Content Include="View\Brands\List.aspx" />
     <Content Include="index.aspx" />
     <Content Include="View\Models\Add.aspx" />
+    <Content Include="View\Models\Delete.aspx" />
     <Content Include="View\Models\Edit.aspx" />
     <Content Include="View\Models\List.aspx" />
     <Content Include="Web.config" />
@@ -124,6 +125,13 @@
     </Compile>
     <Compile Include="View\Models\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Models\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Models\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Models\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>

@@ -32,6 +32,29 @@ namespace CepTelefoncusu.Classes
             cnn.Close();
 
         }
+
+        public static String GetBrandText(int Id){
+            
+            String brandText = "";
+            
+            String sql = "select BrandText from Brands where Id = @Id";
+
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            cmd.Parameters.AddWithValue("@Id", Id);
+
+            cnn.Open();
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                brandText = reader.GetString(0);
+            }
+
+            cnn.Close();
+
+            return brandText;
+        }
+            
         
         // Insert
         public int Insert() {
