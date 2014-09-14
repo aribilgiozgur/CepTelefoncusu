@@ -27,7 +27,7 @@
                 </ItemTemplate>
                 </asp:Repeater>                
             </table>
-            <a href="/Brands/Add.aspx">Marka Ekle</a>
+            <a href="/View/Brands/Add.aspx">Marka Ekle</a>
     
         </div>
     </form>

@@ -12,7 +12,7 @@
         Markası: <asp:DropDownList ID="drpMarka" runat="server">
     </asp:DropDownList><br />
     Modeli: <asp:TextBox ID="txtModel" runat="server"></asp:TextBox><br />
-        <asp:LinkButton ID="lnkSend" runat="server">Gönder</asp:LinkButton>
+        <asp:LinkButton ID="lnkSend" runat="server" OnClick="lnkSend_Click">Gönder</asp:LinkButton>
     </div>
     </form>
 </body>

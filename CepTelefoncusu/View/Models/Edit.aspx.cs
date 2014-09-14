@@ -19,15 +19,32 @@ namespace CepTelefoncusu.View.Models
                 drpMarka.DataValueField = "Id";
                 drpMarka.DataTextField = "BrandText";
                 drpMarka.DataBind();
-
+                
+                // Session'a Id ataması
                 int Id = int.Parse(Request.QueryString["Id"]);
-                Model m = new Model();
-                Model m1 = m.GetModel(Id);
+                Session["Id"] = Id;
+                Model m = new Model(Id);
 
-                drpMarka.SelectedValue = m1.BrandId.ToString();
-                txtModel.Text = m1.ModelText;
+                drpMarka.SelectedValue = m.BrandId.ToString();
+                txtModel.Text = m.ModelText;
 
             }
+        }
+
+        protected void lnkSend_Click(object sender, EventArgs e)
+        {
+            // Session'dan Id alma
+            int Id = int.Parse(Session["Id"].ToString());
+            int brandId = int.Parse(drpMarka.SelectedValue);
+            String modelText = txtModel.Text;
+
+            // Modeli getirip güncelleyip db'ye kaydetmek
+            Model m = new Model(Id);
+            m.BrandId = brandId;
+            m.ModelText = modelText;
+            m.Save();
+            Response.Redirect("List.aspx");
+
         }
     }
 }
