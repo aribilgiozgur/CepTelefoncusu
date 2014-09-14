@@ -61,15 +61,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="index.aspx" />
     <Content Include="View\Brands\Add.aspx" />
     <Content Include="View\Brands\Delete.aspx" />
     <Content Include="View\Brands\Edit.aspx" />
     <Content Include="View\Brands\List.aspx" />
-    <Content Include="index.aspx" />
     <Content Include="View\Models\Add.aspx" />
     <Content Include="View\Models\Delete.aspx" />
     <Content Include="View\Models\Edit.aspx" />
     <Content Include="View\Models\List.aspx" />
+    <Content Include="View\Scripts\css\bootstrap-theme.css" />
+    <Content Include="View\Scripts\css\bootstrap-theme.min.css" />
+    <Content Include="View\Scripts\css\bootstrap.css" />
+    <Content Include="View\Scripts\css\bootstrap.min.css" />
+    <Content Include="View\Scripts\js\bootstrap.js" />
+    <Content Include="View\Scripts\js\bootstrap.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -79,6 +85,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\BootStrap.Master.cs">
+      <DependentUpon>BootStrap.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\BootStrap.Master.designer.cs">
+      <DependentUpon>BootStrap.Master</DependentUpon>
+    </Compile>
     <Compile Include="View\Brands\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -111,13 +131,6 @@
     <Compile Include="Domain\Phone\Brand.cs" />
     <Compile Include="Application\DbConn.cs" />
     <Compile Include="Domain\Phone\Model.cs" />
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\Models\Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
@@ -147,6 +160,17 @@
     <Compile Include="View\Models\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="View\BootStrap.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="View\Scripts\css\bootstrap-theme.css.map" />
+    <Content Include="View\Scripts\css\bootstrap.css.map" />
+    <Content Include="View\Scripts\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="View\Scripts\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="View\Scripts\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="View\Scripts\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

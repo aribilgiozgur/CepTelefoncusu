@@ -1,22 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CepTelefoncusu.index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/BootStrap.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CepTelefoncusu.index" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Cep Telefoncu Hilmi</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <ul>
-        <li><a href="/View/Brands/Add.aspx">Marka Ekle</a></li>
-        <li><a href="/View/Brands/List.aspx">Marka Listele</a></li>
-        <li><a href="/View/Models/Add.aspx">Model Ekle</a></li>
-        <li><a href="/View/Models/List.aspx">Model Listele</a></li>
-
-        </ul>
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+  
+</asp:Content>
