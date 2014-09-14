@@ -65,5 +65,34 @@ namespace CepTelefoncusu.Classes
             return models;
         }
 
+        public Model GetModel(int Id)
+        {
+            Model m = new Model();
+
+            String sql = "select * from Models where Id = @Id";
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            cmd.Parameters.AddWithValue("@Id", Id);
+            try
+            {
+                cnn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    m.Id = reader.GetInt32(0);
+                    m.BrandId = reader.GetInt32(1);
+                    m.ModelText = reader.GetString(2);
+                }
+            }
+            catch (Exception ex)
+            {
+                String msg = ex.Message;
+            }
+            finally
+            {
+                if (cnn.State == ConnectionState.Open) cnn.Close();
+            }
+            return m;
+        }
+
     }
 }

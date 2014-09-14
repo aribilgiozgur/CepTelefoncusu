@@ -24,6 +24,8 @@
                         <td><%# Eval("Id") %></td>
                         <td><%# Eval("BrandText") %></td>
                         <td><%# Eval("ModelText") %></td>
+                        <td><a href="Edit.aspx?Id=<%# Eval("Id") %>">Edit</a></td>
+                        <td><a href="Delete.aspx?Id=<%# Eval("Id") %>">Sil</a></td>
                     </tr>
                 </ItemTemplate>
             </asp:Repeater>
