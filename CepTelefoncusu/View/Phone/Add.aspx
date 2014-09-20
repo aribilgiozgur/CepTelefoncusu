@@ -21,6 +21,10 @@
                 <td><asp:DropDownList ID="drpModelId" runat="server" CssClass="form-control"></asp:DropDownList></td>
             </tr>
             <tr>
+                <td>Seri No:</td>
+                <td><asp:TextBox ID="txtSerialNo" runat="server" CssClass="form-control"></asp:TextBox></td>
+            </tr>
+            <tr>
                 <td>Fiyatı:</td>
                 <td><asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"></asp:TextBox></td>
             </tr>
@@ -43,7 +47,7 @@
             
             <tr>
                 <td colspan="2">
-                    <asp:LinkButton ID="lnkSend" runat="server" CssClass="btn btn-success pull-right" >Gönder</asp:LinkButton>
+                    <asp:LinkButton ID="lnkSend" runat="server" CssClass="btn btn-success pull-right" OnClick="lnkSend_Click" >Gönder</asp:LinkButton>
                 </td>
             </tr>
         </table>

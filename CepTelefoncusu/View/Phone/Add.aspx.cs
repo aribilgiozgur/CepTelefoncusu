@@ -1,4 +1,5 @@
 ﻿using CepTelefoncusu.Classes;
+using CepTelefoncusu.Domain.Phone;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,26 @@ namespace CepTelefoncusu.View.Phone
             drpModelId.DataBind();
 
             drpModelId.Enabled = true; 
+
+        }
+
+        protected void lnkSend_Click(object sender, EventArgs e)
+        {
+            CellPhone cp = new CellPhone();
+            
+            cp.BrandId = int.Parse(drpBrandId.SelectedValue);
+            cp.ModelId = int.Parse(drpModelId.SelectedValue);
+            cp.SerialNo = int.Parse(txtSerialNo.Text);
+            cp.SalePrice = double.Parse(txtPrice.Text);
+            cp.Description = txtDescription.Text;
+            cp.OperatingSystem = txtOperatingSystem.Text;
+            cp.HasTouchScreen = chkTouchScreen.Checked;
+            cp.HasBlueTooth = chkBlueTooth.Checked;
+
+            cp.Insert();
+
+            Response.Redirect("/index.aspx");
+
 
         }
        
