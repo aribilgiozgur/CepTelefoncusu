@@ -92,6 +92,42 @@ namespace CepTelefoncusu.Classes
             return models;
         }
 
+        public List<Model> GetModels(int brandId)
+        {
+            List<Model> models = new List<Model>();
+
+            String sql = "select"
+            + " m.Id,b.BrandText,m.ModelText"
+            + " from Models m"
+            + " INNER JOIN Brands b ON b.Id = m.BrandId"
+            + " WHERE m.BrandId = @BrandId";
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            cmd.Parameters.AddWithValue("@BrandId", brandId);
+
+            try
+            {
+                cnn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Model m = new Model();
+                    m.Id = reader.GetInt32(0);
+                    m.BrandText = reader.GetString(1);
+                    m.ModelText = reader.GetString(2);
+                    models.Add(m);
+                }
+            }
+            catch (Exception ex)
+            {
+                String msg = ex.Message;
+            }
+            finally
+            {
+                if (cnn.State == ConnectionState.Open) cnn.Close();
+            }
+            return models;
+        }
+
         public Boolean Save()
         {
             try
