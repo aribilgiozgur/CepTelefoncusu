@@ -19,7 +19,7 @@ namespace CepTelefoncusu.View.Models
                 drpMarka.DataValueField = "Id";
                 drpMarka.DataTextField = "BrandText";
                 drpMarka.DataBind();
-                
+
                 // Session'a Id ataması
                 int Id = int.Parse(Request.QueryString["Id"]);
                 Session["Id"] = Id;

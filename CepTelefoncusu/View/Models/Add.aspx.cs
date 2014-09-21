@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CepTelefoncusu.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CepTelefoncusu.Classes;
 
 namespace CepTelefoncusu.View.Models
 {
@@ -21,7 +21,7 @@ namespace CepTelefoncusu.View.Models
                 drpMarka.DataBind();
             }
 
-                
+
         }
 
         protected void lnkSend_Click(object sender, EventArgs e)

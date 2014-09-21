@@ -1,19 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="CepTelefoncusu.View.Models.Edit" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-   <div>
-        Markası: <asp:DropDownList ID="drpMarka" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/BootStrap.Master" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="CepTelefoncusu.View.Models.Edit" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+        Markası: <asp:DropDownList ID="drpMarka" runat="server" CssClass="form-input">
     </asp:DropDownList><br />
-    Modeli: <asp:TextBox ID="txtModel" runat="server"></asp:TextBox><br />
-        <asp:LinkButton ID="lnkSend" runat="server" OnClick="lnkSend_Click">Gönder</asp:LinkButton>
+    Modeli: <asp:TextBox ID="txtModel" runat="server" CssClass="form-input"></asp:TextBox><br />
+        <asp:LinkButton ID="lnkSend" runat="server" OnClick="lnkSend_Click" CssClass="btn btn-success">Gönder</asp:LinkButton>
     </div>
-    </form>
-</body>
-</html>
+</asp:Content>
