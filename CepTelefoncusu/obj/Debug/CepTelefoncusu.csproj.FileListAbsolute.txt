@@ -6,3 +6,4 @@ C:\Users\ARIBİLGİ\Documents\Visual Studio 2012\Projects\CepTelefoncusu\CepTele
 C:\Users\ARIBİLGİ\Documents\Visual Studio 2012\Projects\CepTelefoncusu\CepTelefoncusu\bin\CepTelefoncusu.pdb
 C:\Users\ARIBİLGİ\Documents\Visual Studio 2012\Projects\CepTelefoncusu\CepTelefoncusu\obj\Debug\CepTelefoncusu.dll
 C:\Users\ARIBİLGİ\Documents\Visual Studio 2012\Projects\CepTelefoncusu\CepTelefoncusu\obj\Debug\CepTelefoncusu.pdb
+C:\Users\ARIBİLGİ\Documents\Visual Studio 2012\Projects\CepTelefoncusu\CepTelefoncusu\obj\Debug\CepTelefoncusu.csprojResolveAssemblyReference.cache

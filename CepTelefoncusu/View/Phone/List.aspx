@@ -16,7 +16,7 @@
                 <ItemTemplate>
                     <tr>
                         <td><%# Eval("Id") %></td>
-                        <td><%# Eval("BrandText")%> <%# Eval("ModelText") %></td>
+                        <td><a href="View.aspx?Id=<%# Eval("Id") %>"><%# Eval("BrandText") %> <%# Eval("ModelText") %></a></td>
                         <td><%# Eval("SerialNo") %></td>
                         <td><%# Eval("OperatingSystem") %></td>
                         <td><%# Eval("HasTouchScreen").ToString() == "True" ? "<input type='checkbox' checked='true' disabled = 'true'/>" : "<input type='checkbox' disabled = 'true'/>" %></td>

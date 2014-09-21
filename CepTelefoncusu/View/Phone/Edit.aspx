@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/BootStrap.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="CepTelefoncusu.View.Phone.Add" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/BootStrap.Master" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="CepTelefoncusu.View.Phone.Edit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
-    <div class="container">
+     <div class="container">
         <table class="table">
             <tr>
                 <td>Markası:</td>
@@ -40,7 +39,7 @@
             
             <tr>
                 <td colspan="2">
-                    <asp:LinkButton ID="lnkSend" runat="server" CssClass="btn btn-success pull-right" OnClick="lnkSend_Click" >Gönder</asp:LinkButton>
+                    <asp:LinkButton ID="lnkSend" runat="server" CssClass="btn btn-success pull-right" OnClick="lnkSend_Click">Gönder</asp:LinkButton>
                 </td>
             </tr>
         </table>

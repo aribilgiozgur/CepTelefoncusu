@@ -71,7 +71,10 @@
     <Content Include="View\Models\Edit.aspx" />
     <Content Include="View\Models\List.aspx" />
     <Content Include="View\Phone\Add.aspx" />
+    <Content Include="View\Phone\Delete.aspx" />
+    <Content Include="View\Phone\Edit.aspx" />
     <Content Include="View\Phone\List.aspx" />
+    <Content Include="View\Phone\View.aspx" />
     <Content Include="View\Scripts\css\bootstrap-theme.css" />
     <Content Include="View\Scripts\css\bootstrap-theme.min.css" />
     <Content Include="View\Scripts\css\bootstrap.css" />
@@ -170,12 +173,33 @@
     <Compile Include="View\Phone\Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\Phone\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Phone\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Phone\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Phone\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Phone\List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Phone\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Phone\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Phone\View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
