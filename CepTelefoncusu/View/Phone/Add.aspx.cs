@@ -52,7 +52,7 @@ namespace CepTelefoncusu.View.Phone
             
             cp.BrandId = int.Parse(drpBrandId.SelectedValue);
             cp.ModelId = int.Parse(drpModelId.SelectedValue);
-            cp.SerialNo = int.Parse(txtSerialNo.Text);
+            cp.SerialNo = long.Parse(txtSerialNo.Text);
             cp.SalePrice = double.Parse(txtPrice.Text);
             cp.Description = txtDescription.Text;
             cp.OperatingSystem = txtOperatingSystem.Text;

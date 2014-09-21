@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CepTelefoncusu.Domain.Phone;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace CepTelefoncusu.View.Phone
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CellPhone c = new CellPhone();
+            rptPhones.DataSource = c.GetAll();
+            rptPhones.DataBind();
         }
     }
 }
