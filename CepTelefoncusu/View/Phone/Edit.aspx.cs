@@ -35,11 +35,13 @@ namespace CepTelefoncusu.View.Phone
                 drpBrandId.SelectedValue = c.BrandId.ToString();
                 drpModelId.SelectedValue = c.ModelId.ToString();
                 txtSerialNo.Text = c.SerialNo.ToString();
-                txtPrice.Text = c.SalePrice.ToString();
+                txtBuyPrice.Text = c.BuyPrice.ToString();
+                txtSalePrice.Text = c.SalePrice.ToString();
                 txtDescription.Text = c.Description;
                 txtOperatingSystem.Text = c.OperatingSystem;
                 chkBlueTooth.Checked = c.HasBlueTooth;
                 chkTouchScreen.Checked = c.HasTouchScreen;
+                txtStock.Text = c.Stock.ToString();
 
 
             }
@@ -66,11 +68,13 @@ namespace CepTelefoncusu.View.Phone
             c.BrandId = int.Parse(drpBrandId.SelectedValue);
             c.ModelId = int.Parse(drpModelId.SelectedValue);
             c.SerialNo = long.Parse(txtSerialNo.Text);
-            c.SalePrice = double.Parse(txtPrice.Text);
+            c.BuyPrice = double.Parse(txtBuyPrice.Text);
+            c.SalePrice = double.Parse(txtSalePrice.Text);
             c.Description = txtDescription.Text;
             c.OperatingSystem = txtOperatingSystem.Text;
             c.HasTouchScreen = chkTouchScreen.Checked;
             c.HasBlueTooth = chkBlueTooth.Checked;
+            c.Stock = int.Parse(txtStock.Text);
 
             c.Save();
             Response.Redirect("List.aspx");

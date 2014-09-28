@@ -13,11 +13,13 @@ namespace CepTelefoncusu.Domain.Phone
         public int BrandId { get; set; }
         public int ModelId { get; set; }
         public long SerialNo { get; set; }
+        public double BuyPrice { get; set; }
         public double SalePrice { get; set; }
         public string Description { get; set; }
         public Boolean HasTouchScreen { get; set; }
         public Boolean HasBlueTooth { get; set; }
         public String OperatingSystem { get; set; }
+        public int Stock { get; set; }
 
         public String BrandText { get; set; }
         public String ModelText { get; set; }
@@ -26,21 +28,22 @@ namespace CepTelefoncusu.Domain.Phone
 
         public void Insert() { 
             String sql = "insert into phones ("
-            +" BrandId,ModelId,SerialNo,SalePrice,DescriptionText,HasTouchScreen,HasBlueTooth,OperatingSystem"
+            +" BrandId,ModelId,SerialNo,SalePrice,DescriptionText,HasTouchScreen,HasBlueTooth,OperatingSystem,Stock,BuyPrice"
             +" )VALUES ("
-            +" @BrandId,@ModelId,@SerialNo,@SalePrice,@DescriptionText,@HasTouchScreen,@HasBlueTooth,@OperatingSystem"
+            +" @BrandId,@ModelId,@SerialNo,@SalePrice,@DescriptionText,@HasTouchScreen,@HasBlueTooth,@OperatingSystem,@Stock,@BuyPrice"
             +" )";
 
             SqlCommand cmd = new SqlCommand(sql, cnn);
             cmd.Parameters.AddWithValue("@BrandId", this.BrandId);
             cmd.Parameters.AddWithValue("@ModelId", this.ModelId);
             cmd.Parameters.AddWithValue("@SerialNo", this.SerialNo);
+            cmd.Parameters.AddWithValue("@BuyPrice", this.BuyPrice);
             cmd.Parameters.AddWithValue("@SalePrice", this.SalePrice);
             cmd.Parameters.AddWithValue("@DescriptionText", this.Description);
             cmd.Parameters.AddWithValue("@HasTouchScreen", this.HasTouchScreen);
             cmd.Parameters.AddWithValue("@HasBlueTooth", this.HasBlueTooth);
             cmd.Parameters.AddWithValue("@OperatingSystem", this.OperatingSystem);
-
+            cmd.Parameters.AddWithValue("@Stock", this.Stock);
             cnn.Open();
             cmd.ExecuteNonQuery();
             cnn.Close();
@@ -68,6 +71,8 @@ namespace CepTelefoncusu.Domain.Phone
                 c.HasTouchScreen = bool.Parse(reader["HasTouchScreen"].ToString());
                 c.HasBlueTooth = bool.Parse(reader["HasBlueTooth"].ToString());
                 c.OperatingSystem = reader["OperatingSystem"].ToString();
+                c.BuyPrice = double.Parse(reader["BuyPrice"].ToString());
+                c.Stock = int.Parse(reader["Stock"].ToString());
 
                 c.ModelText = reader["ModelText"].ToString();
                 c.BrandText = reader["BrandText"].ToString();
@@ -105,6 +110,8 @@ namespace CepTelefoncusu.Domain.Phone
                 c.HasTouchScreen = bool.Parse(reader["HasTouchScreen"].ToString());
                 c.HasBlueTooth = bool.Parse(reader["HasBlueTooth"].ToString());
                 c.OperatingSystem = reader["OperatingSystem"].ToString();
+                c.BuyPrice = double.Parse(reader["BuyPrice"].ToString());
+                c.Stock = int.Parse(reader["Stock"].ToString());
 
                 c.ModelText = reader["ModelText"].ToString();
                 c.BrandText = reader["BrandText"].ToString();
@@ -143,6 +150,8 @@ namespace CepTelefoncusu.Domain.Phone
                 this.HasTouchScreen = bool.Parse(reader["HasTouchScreen"].ToString());
                 this.HasBlueTooth = bool.Parse(reader["HasBlueTooth"].ToString());
                 this.OperatingSystem = reader["OperatingSystem"].ToString();
+                this.BuyPrice = double.Parse(reader["BuyPrice"].ToString());
+                this.Stock = int.Parse(reader["Stock"].ToString());
 
                 this.ModelText = reader["ModelText"].ToString();
                 this.BrandText = reader["BrandText"].ToString();                
@@ -170,7 +179,9 @@ namespace CepTelefoncusu.Domain.Phone
                 + " DescriptionText = @Description,"
                 + " HasTouchScreen = @HasTouchScreen,"
                 + " HasBlueTooth = @HasBlueTooth,"
-                + " OperatingSystem = @OperatingSystem"
+                + " OperatingSystem = @OperatingSystem,"
+                + " Stock = @Stock,"
+                + " BuyPrice = @BuyPrice"
                 + " where"
                 + " Id = @Id";
 
@@ -184,6 +195,8 @@ namespace CepTelefoncusu.Domain.Phone
             cmd.Parameters.AddWithValue("@HasTouchScreen", this.HasTouchScreen);
             cmd.Parameters.AddWithValue("@HasBlueTooth", this.HasBlueTooth);
             cmd.Parameters.AddWithValue("@OperatingSystem", this.OperatingSystem);
+            cmd.Parameters.AddWithValue("@BuyPrice", this.BuyPrice);
+            cmd.Parameters.AddWithValue("@Stock", this.Stock);
             cmd.Parameters.AddWithValue("@Id", this.Id);
 
             cmd.ExecuteNonQuery();

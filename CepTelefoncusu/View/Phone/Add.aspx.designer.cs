@@ -40,13 +40,22 @@ namespace CepTelefoncusu.View.Phone {
         protected global::System.Web.UI.WebControls.TextBox txtSerialNo;
         
         /// <summary>
-        /// txtPrice control.
+        /// txtBuyPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrice;
+        protected global::System.Web.UI.WebControls.TextBox txtBuyPrice;
+        
+        /// <summary>
+        /// txtSalePrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSalePrice;
         
         /// <summary>
         /// txtDescription control.
@@ -56,6 +65,15 @@ namespace CepTelefoncusu.View.Phone {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        
+        /// <summary>
+        /// txtStock control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtStock;
         
         /// <summary>
         /// txtOperatingSystem control.

@@ -17,6 +17,13 @@
                         <td align="center"><%# Eval("SalePrice") %></td>
                     </tr>
                     <tr>
+                        <th>Stok</th>
+                        <td align="center">
+                            <%# Eval("Stock") %>
+
+                        </td>
+                    </tr>
+                    <tr>
                         <th>Açıklaması</th>
                         <td align="center">
                             <textarea class="form-control" rows="9" disabled="true"><%# Eval("Description") %></textarea></td>

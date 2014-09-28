@@ -75,6 +75,7 @@
     <Content Include="View\Phone\Edit.aspx" />
     <Content Include="View\Phone\List.aspx" />
     <Content Include="View\Phone\View.aspx" />
+    <Content Include="View\Sales\Add.aspx" />
     <Content Include="View\Scripts\css\bootstrap-theme.css" />
     <Content Include="View\Scripts\css\bootstrap-theme.min.css" />
     <Content Include="View\Scripts\css\bootstrap.css" />
@@ -91,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Phone\CellPhone.cs" />
+    <Compile Include="Domain\Transaction\Sale.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -200,6 +202,13 @@
     </Compile>
     <Compile Include="View\Phone\View.aspx.designer.cs">
       <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sales\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Sales\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

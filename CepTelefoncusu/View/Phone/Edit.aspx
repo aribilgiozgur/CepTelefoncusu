@@ -17,12 +17,20 @@
                 <td><asp:TextBox ID="txtSerialNo" runat="server" CssClass="form-control"></asp:TextBox></td>
             </tr>
             <tr>
-                <td>Fiyatı:</td>
-                <td><asp:TextBox ID="txtPrice" runat="server" CssClass="form-control"></asp:TextBox></td>
+                <td>Alış Fiyatı:</td>
+                <td><asp:TextBox ID="txtBuyPrice" runat="server" CssClass="form-control"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td>Satış Fiyatı:</td>
+                <td><asp:TextBox ID="txtSalePrice" runat="server" CssClass="form-control"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Açıklaması</td>
                 <td><asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" Rows="9" CssClass="form-control"></asp:TextBox></td>
+            </tr>
+            <tr>
+                <td>Stok:</td>
+                <td><asp:TextBox ID="txtStock" runat="server" CssClass="form-control"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>İşletim Sistemi:</td>
