@@ -21,7 +21,7 @@
                 </ItemTemplate>
                 </asp:Repeater>                
             </table>
-            <a href="/View/Brands/Add.aspx">Marka Ekle</a>
+            <a href="/View/Brands/Add.aspx" class="btn btn-danger">Marka Ekle</a>
     
         </div>
 </asp:Content>

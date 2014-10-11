@@ -13,6 +13,8 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+        <form id="form1" runat="server">
+
      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -29,7 +31,9 @@
               <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Marka <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                  <%if(UserLoggedIn == true){ %>
                 <li><a href="/View/Brands/Add.aspx">Ekle</a></li>
+                  <%} %>
                 <li><a href="/View/Brands/List.aspx">Listele</a></li>                
               </ul>
             </li>
@@ -55,15 +59,26 @@
                 <li><a href="/View/Sales/Add.aspx">Ekle</a></li>                
               </ul>
             </li>   
-                  
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+               <% if(UserLoggedIn == false){ %>
+              <li>
+                <a href="Login.aspx">Login</a>
+              </li>
+              <% } else{%>
+             <li>
+                <a href="#">Hoşgeldin <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label></a>
+             </li>
+              <li>
+                <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+              </li>
+              <%} %>
+               
           </ul>
+            
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <form id="form1" runat="server">
+      
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
